@@ -3,10 +3,7 @@ import axios from 'axios';
 import Swal from 'sweetalert2';
 import { useNavigate, Link } from 'react-router-dom';
 
-interface LoginData {
-  email: string;
-  password: string;
-}
+
 
 const apiUrl = 'https://weatherapp-6wx0.onrender.com/api/auth/signin'; 
 
