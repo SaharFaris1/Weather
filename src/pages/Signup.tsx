@@ -38,7 +38,7 @@ const Signup: React.FC = () => {
       });
 
       localStorage.setItem('user', JSON.stringify(response.data));
-
+      localStorage.setItem('token', response.data.token);
       Swal.fire('Success', 'Registration successful!', 'success').then(() => {
         navigate('/signin'); 
       });
