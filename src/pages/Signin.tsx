@@ -81,7 +81,7 @@ const Signin: React.FC = () => {
             Login
           </button>
 
-          {/* Register Link ← تم تحديثه إلى <Link> */}
+         
           <p className="mt-4 text-sm text-gray-600 text-center">
             Don't have an account?{' '}
             <Link to="/" className="text-blue-500 hover:underline">
