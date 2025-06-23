@@ -2,15 +2,17 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Signup from '../pages/Signup';
 import Signin from '../pages/Signin';
 import WeatherPage from '../pages/Weather';
+import Nav from "../component/Nav";
+import Footer from "../component/Footer";
 
 
 function Layout() {
     return(
     <>
-  
+  <Nav/>
     <Outlet/>
 
-
+<Footer/>
     </>
     )
   }

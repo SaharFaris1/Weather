@@ -50,7 +50,7 @@ const WeatherPage = () => {
   };
 
   return (
-    <div className="w-screen h-screen flex flex-col gap-8 p-8 m-8">
+    <div className=" flex flex-col gap-8 p-8 m-8">
       <h1 className="text-2xl font-bold">🌤️ Get Weather</h1>
 
       <input
