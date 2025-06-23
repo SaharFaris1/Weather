@@ -23,11 +23,12 @@ function Layout() {
       path: "/",
       element: <Layout/>,
       children: [
-        { index: true, element: <Signup /> },
-        { path: "signin", element: <Signin /> },
+       
         { path: "weather", element: <WeatherPage /> }
       ]
-    }
+    },
+    { index: true, element: <Signup /> },
+    { path: "signin", element: <Signin /> }
   ]);
 function Router() {
   return (
