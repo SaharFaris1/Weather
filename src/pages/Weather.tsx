@@ -11,32 +11,36 @@ interface WeatherData {
     description: string;
   }>;
 }
-
 const WeatherPage = () => {
   const [lat, setLat] = useState<string>('');
   const [lon, setLon] = useState<string>('');
   const [weatherData, setWeatherData] = useState<WeatherData | null>(null);
 
   const fetchWeather = async () => {
+    const token = localStorage.getItem('token');
+  
+    if (!token) {
+      Swal.fire('Error', 'You must be logged in to check the weather.', 'error');
+      window.location.href = '/signin'; 
+      return;
+    }
+  
     const latNum = parseFloat(lat);
     const lonNum = parseFloat(lon);
-
+  
     if (isNaN(latNum) || isNaN(lonNum)) {
       Swal.fire('Error', 'Please enter valid coordinates', 'error');
       return;
     }
-
+  
     try {
-      const token = localStorage.getItem('token');
-      
-
-      const res = await axios.get('https://weatherapp-6wx0.onrender.com/api/weather',    {
+      const res = await axios.get('https://weatherapp-6wx0.onrender.com/api/weather',{
         params: { lat: latNum, lon: lonNum },
         headers: {
-          Authorization: `Bearer ${token}`
-        }
+          Authorization: `Bearer ${token}`,
+        },
       });
-
+  
       setWeatherData(res.data);
     } catch (err: any) {
       console.error(err);

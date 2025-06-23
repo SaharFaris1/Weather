@@ -30,7 +30,7 @@ const Signin: React.FC = () => {
       localStorage.setItem('token', response.data.token);
 
       Swal.fire('Success', 'Login successful!', 'success').then(() => {
-        navigate('/weather'); // ✅ التنقل بدون إعادة تحميل الصفحة
+        navigate('/weather'); 
       });
     } catch (err: any) {
       console.error(err);

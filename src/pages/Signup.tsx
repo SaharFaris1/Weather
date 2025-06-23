@@ -20,8 +20,8 @@ const Signup: React.FC = () => {
       return;
     }
 
-    if (password.length < 6) {
-      Swal.fire('Error', 'Password must be at least 6 characters', 'error');
+    if (password.length < 8) {
+      Swal.fire('Error', 'Password must be at least 8 characters', 'error');
       return;
     }
 
