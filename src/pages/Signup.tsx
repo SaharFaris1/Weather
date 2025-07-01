@@ -4,7 +4,7 @@ import Swal from 'sweetalert2';
 import { useNavigate, Link } from 'react-router-dom';
 
 
-const apiUrl = 'https://weatherapp-6wx0.onrender.com/api/auth/signup'; 
+const apiUrl = 'https://weather-api-zk64.onrender.com/auth/signup'; 
 
 const Signup: React.FC = () => {
   const [email, setEmail] = useState<string>('');

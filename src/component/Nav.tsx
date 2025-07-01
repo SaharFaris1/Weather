@@ -18,7 +18,7 @@ const Nav: React.FC = () => {
     if (user) {
       const parsedUser: User = JSON.parse(user);
       setIsLoggedIn(true);
-      setUserName(parsedUser.fullName || 'مستخدم');
+      setUserName(parsedUser.fullName || '');
     }
 
     const handleStorageChange = () => {
@@ -26,7 +26,7 @@ const Nav: React.FC = () => {
       if (currentUser) {
         const parsedUser: User = JSON.parse(currentUser);
         setIsLoggedIn(true);
-        setUserName(parsedUser.fullName || 'مستخدم');
+        setUserName(parsedUser.fullName || '');
       } else {
         setIsLoggedIn(false);
         setUserName('');
